@@ -1,0 +1,91 @@
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+}
+
+@font-face {
+  font-family: "Heroes Legend";
+  src: url("./assets/fonts/Heroes Legend.ttf");
+}
+@font-face {
+  font-family: "Sweet Cake";
+  src: url("./assets/fonts/Sweet Cake.otf");
+}
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* background: linear-gradient(45deg, #2bc0e4, #eaecc6); */
+  /* background: linear-gradient(45deg, #4b6cb7, #182848); */
+  /* background: linear-gradient(45deg, #84a8fb, #6998f6); */
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.final__toggle-1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+.final__toggle-1__input {
+  display: none;
+}
+.final__toggle-1__button {
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2395a;
+  border: 1px solid #f2395a;
+  color: #ffffff;
+  width: 120px;
+  height: 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: monospace;
+  text-align: center;
+  box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.5);
+}
+.final__toggle-1__button:before {
+  font-family: "Heroes Legend";
+  border-radius: 5px;
+  position: absolute;
+  bottom: -15px;
+  left: 60px;
+  right: auto;
+  display: inline-block;
+  height: 30px;
+  padding: 5px 5px 3px 3px;
+  background-color: #ffffff;
+  color: #f2395a;
+  content: "off";
+  transition: all 0.3s ease;
+  vertical-align: center;
+  box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.75);
+}
+.final__toggle-1__input:checked + .final__toggle-1__button {
+  background-color: #111;
+  border: 1px solid #111;
+}
+.final__toggle-1__input:checked + .final__toggle-1__button:before {
+  left: 5px;
+  content: "on";
+  color: #111;
+}
+
+/* #E9E4F0, #D3CCE3  */
+
+/* #2BC0E4 #EAECC6 */
+
+/* #4b6cb7,#182848  */
